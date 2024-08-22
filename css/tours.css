@@ -1,0 +1,401 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url("all.min.css");
+@import url("bootstrap.min.css");
+@import url("animate.css");
+@import url("normailse.css");
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Marck Script', cursive;
+    font-family: 'Outfit', sans-serif;
+    text-transform: capitalize;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+::selection {
+    background-color: var(--light-green);
+    color: #fff;
+}
+
+/* Global Variables */
+:root {
+    --body-font: 'Outfit', sans-serif;
+    --title-font: 'Marck Script', cursive;
+    --dark-blue: #002248;
+    --blue-color: #3685fb;
+    --light-green: #44d7b6;
+    --paragraph-color: #585c63;
+    --red-color: #de4343;
+    --dark-green: #7ac24d;
+    --gray-color: #969ba1;
+    --yellow-color: #f9bf00;
+    --shadow: 0px 20px 20px 0px #0000001c;
+}
+
+.activeBtn {
+    color: var(--light-green) !important;
+    font-weight: 700;
+}
+
+.card {
+    height: 100%;
+}
+
+.intro-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 500;
+}
+
+.intro-text h3 {
+    color: var(--light-green);
+    text-transform: capitalize;
+    font-size: 36px;
+    font-family: var(--title-font);
+}
+
+.intro-text h1 {
+    color: var(--dark-blue);
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.intro-text p {
+    color: var(--paragraph-color);
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.head-title {
+    margin-bottom: 20px;
+}
+
+.head-title h3 {
+    color: var(--dark-blue);
+    font-size: 36px;
+    text-transform: none;
+    display: inline-block;
+}
+
+.head-title h3::first-letter {
+    text-transform: uppercase;
+}
+
+.head-title a {
+    margin-left: 30px;
+}
+
+.swap {
+    display: flex;
+    gap: 10px;
+}
+
+.swap span {
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+}
+
+.swap span:hover {
+    cursor: pointer;
+    background-color: var(--blue-color);
+}
+
+
+.swap span:hover i {
+    color: #fff;
+}
+
+.common-animate {
+    display: inline-block;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.common-animate a {
+    color: var(--dark-blue) !important;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 14px !important;
+    padding-bottom: 5px;
+    position: relative;
+    display: inline !important;
+}
+
+.common-animate a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background-color: var(--dark-blue);
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+}
+
+.common-animate a:hover:before {
+    width: 100%;
+}
+
+.common-animate span {
+    background-color: var(--blue-color);
+    display: inline-flex;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+.common-animate span i {
+    color: #fff;
+    font-size: 12px;
+}
+
+.common-animate:hover a:before {
+    width: 100%;
+}
+
+.common-animate:hover span {
+    background-color: var(--light-green);
+}
+/* /////////////////////////////////////////////////////// */
+
+/* Start Background Title Style */
+.background-title {
+    background-image: url(../images/Breadcrumb-default.jpg);
+}
+
+.background-title::before {
+    opacity: .2;
+}
+/* End Background Title Style */
+
+/* Start Home Style */
+.home-search .travel-search {
+    top: -30px;
+} 
+
+/* End Home Style */
+
+/* Start Tours Section */
+.swing {
+    background-color: transparent;
+    padding-top: 0;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.swing .filter-sort {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.swing .filter-sort .tours-filter,
+.swing .filter-sort .sort-of-all {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.swing .filter-sort button {
+    background-color: transparent;
+    color: var(--dark-blue);
+    font-size: 14px;
+    text-transform: capitalize;
+    border-color: #eaeaea;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.swing .filter-sort .sort-of-all .tours-found h3 {
+    font-size: 14px;
+    color: var(--paragraph-color);
+}
+
+.swing .filter-sort .tours-filter .dropdown .dropdown-menu {
+    max-height: 300px;
+    overflow-y: scroll;
+    min-width: 200px;
+}
+
+.swing .filter-sort .tours-filter .dropdown .dropdown-menu li a {
+    text-transform: capitalize;
+    color: var(--dark-blue);
+}
+
+.tours .card .imgItem {
+    height: 200px;
+}
+
+.swing .change-page {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.swing .change-page span {
+    background-color: transparent;
+    color: var(--paragraph-color);
+    border: 1px solid #eaeaea;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+}
+
+.swing .change-page .first-page,
+.swing .change-page span:hover {
+    background-color: var(--light-green);
+    color: #fff;
+    border: none;
+}
+/* End Tours Section */
+
+/* Start Destination Style */
+/* .destination {
+    margin-top: 100px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.destination .row {
+    gap: 30px 0;
+}
+
+.destination .card {
+    border: none;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.destination .card .image {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.destination .card .image img {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+}
+
+.destination .card .image img:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.destination .card .card-body {
+    position: relative;
+}
+
+.destination .card .card-body .tour {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    background-color: var(--light-green);
+    color: #fff;
+    padding: 5px;
+    font-size: 14px;
+    text-transform: capitalize;
+    z-index: 2;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.destination .card .card-body h5 {
+    font-family: var(--title-font);
+    color: var(--dark-blue);
+    font-size: 30px;
+    font-weight: 600;
+} */
+/* End Destination Style */
+

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: outfit;
+    src: 
+    url("../font/Outfit-Black.ttf"),
+    url("../font/Outfit-Bold.ttf"),
+    url("../font/Outfit-ExtraBold.ttf"),
+    url("../font/Outfit-ExtraLight.ttf"),
+    url("../font/Outfit-Light.ttf"),
+    url("../font/Outfit-Medium.ttf"),
+    url("../font/Outfit-Regular.ttf"),
+    url("../font/Outfit-SemiBold.ttf"),
+    url("../font/Outfit-Thin.ttf");
+}
